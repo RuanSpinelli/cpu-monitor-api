@@ -1,5 +1,6 @@
 package com.ruan.cpu.service;
 
+import com.ruan.cpu.dto.CPUUsageDTO;
 import com.ruan.cpu.dto.ProcessInfoDTO;
 import org.springframework.stereotype.Service;
 import oshi.SystemInfo;
@@ -22,12 +23,13 @@ public class MonitorService {
 
 
 
-    public double getCpuUsage() {
+    public CPUUsageDTO getCpuUsage() {
         long[] ticks = processor.getSystemCpuLoadTicks();
         double cpuLoad = processor.getSystemCpuLoadBetweenTicks(prevTicks);
-        prevTicks = ticks;  // atualiza para o próximo cálculo
-        return cpuLoad * 100;
+        prevTicks = ticks;
+        return new CPUUsageDTO(cpuLoad * 100);
     }
+
 
     public List<ProcessInfoDTO> getTopProcesses(int topN) {
         List<OSProcess> procs = os.getProcesses();

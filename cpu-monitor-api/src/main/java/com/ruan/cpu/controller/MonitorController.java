@@ -1,5 +1,6 @@
 package com.ruan.cpu.controller;
 
+import com.ruan.cpu.dto.CPUUsageDTO;
 import com.ruan.cpu.dto.ProcessInfoDTO;
 import com.ruan.cpu.service.MonitorService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,7 @@ public class MonitorController {
     }
 
     @GetMapping("/cpu-usage")
-    public double getCpuUsage() {
+    public CPUUsageDTO getCpuUsage() {
         return monitorService.getCpuUsage();
     }
 
