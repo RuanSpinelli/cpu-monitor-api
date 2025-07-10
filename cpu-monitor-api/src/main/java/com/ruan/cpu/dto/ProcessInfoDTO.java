@@ -8,9 +8,9 @@ import lombok.*;
 @AllArgsConstructor
 
 public class ProcessInfoDTO {
-    private Long pid;
+    private long pid;
     private String name;
     private double cpuLoadPercent;
-    private byte memoryBytes;
+    private Long memoryBytes;
 
 }
