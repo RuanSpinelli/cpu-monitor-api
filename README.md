@@ -132,7 +132,5 @@ curl http://localhost:8080/cpu-usage
 Este projeto está sob a licença MIT.
 Feito com 💻 e ☕ por [@RuanSpinelli](https://github.com/RuanSpinelli)
 
-```
 
----
 
