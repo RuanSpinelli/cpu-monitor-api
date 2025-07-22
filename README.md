@@ -126,7 +126,9 @@ curl http://localhost:8080/cpu-usage
     </td>
   </tr>
 </table>
+
 ---
+
 ## 📄 Licença
 
 Este projeto está sob a licença MIT.
